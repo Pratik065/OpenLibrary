@@ -1,0 +1,18 @@
+<div>
+  <h1>ADD AUTHORS</h1>
+  <form [formGroup] = "authorsForm" (ngSubmit) = "saveAuthor()">
+    <div class="authorInfo">
+      <label for="name">NAME : </label>
+      <input type="text" id="name" class="infoInput" formControlName = "name">
+    </div>
+    <div class="authorInfo">
+      <label for="birthDate">DATE OF BIRTH : </label>
+      <input type="date" id="birthDate" class="infoInput" formControlName = "birthDate">
+    </div>
+    <div class="authorInfo">
+      <label for="nationality">NATIONALITY : </label>
+      <input type="text" id="nationality" class="infoInput" formControlName = "nationality">
+    </div>
+    <button type="submit">Save Author</button>
+  </form>
+</div>

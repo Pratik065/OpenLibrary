@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<div style="margin: 20px; float: right;">
+  <button class="button" (click)="addPublisher()">+ADD PUBLISHER</button>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ADDRESS</th>
+        <th>PHONE</th>
+        <th>EMAIL</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody *ngIf = "publishers.length>0">
+      <tr *ngFor = "let publisher of publishers">
+        <td>{{publisher.id}}</td>
+        <td>{{publisher.name}}</td>
+        <td>{{publisher.address}}</td>
+        <td>{{publisher.phone}}</td>
+        <td>{{publisher.email}}</td>
+        <td><button (click)="deletePublisher(publisher.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

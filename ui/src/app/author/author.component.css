@@ -1,0 +1,41 @@
+table
+{
+  overflow: auto;
+  border-collapse: collapse;
+  width: 95%;
+}
+th, td
+{
+  text-align: left;
+  padding: 8px;
+}
+th
+{
+  background-color: #ff3366;
+  color: #fff;
+}
+tr:nth-child(even)
+{
+  background-color: #f2f2f2;
+}
+.button
+{
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin-right: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: 300ms;
+}
+.button:hover
+{
+  background-color: #e23963;
+}
+h1
+{
+  color: #ff3366;
+}

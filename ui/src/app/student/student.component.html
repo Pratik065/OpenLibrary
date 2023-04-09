@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<div style="margin: 20px; float: right;">
+  <button class="button" (click)="addStudent()">+ ADD STUDENT</button>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>DEPARTMENT</th>
+        <th>ROLL NUMBER</th>
+        <th>BIRTH DATE</th>
+        <th>MOBILE NUMBER</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody *ngIf = "students.length>0">
+      <tr *ngFor = "let Student of students">
+        <td>{{Student.id}}</td>
+        <td>{{Student.name}}</td>
+        <td>{{Student.department}}</td>
+        <td>{{Student.rollNumber}}</td>
+        <td>{{Student.birthDate}}</td>
+        <td>{{Student.mobileNumber}}</td>
+        <td><button (click)="deleteStudent(Student.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

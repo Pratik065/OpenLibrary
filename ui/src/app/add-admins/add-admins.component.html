@@ -1,0 +1,18 @@
+<div>
+  <h1>ADD ADMINS</h1>
+  <form [formGroup] = "adminsForm" (ngSubmit) = "saveAdmin()">
+    <div class="adminInfo">
+      <label for="name">NAME : </label>
+      <input type="text" id="name" class="inputInfo" formControlName = "name">
+    </div>
+    <div class="adminInfo">
+      <label for="username">USERNAME : </label>
+      <input type="text" id="username" class="inputInfo" formControlName = "username">
+    </div>
+    <div class="adminInfo">
+      <label for="password">PASSWORD : </label>
+      <input type="text" id="password" class="inputInfo" formControlName = "password">
+    </div>
+    <button type="submit">Save Admin</button>
+  </form>
+</div>

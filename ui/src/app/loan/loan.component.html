@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<div style="margin: 20px; float: right;">
+  <button class="button" (click)="addLoan()">+ ADD LOAN</button>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>BOOK ID</th>
+        <th>STUDENT ID</th>
+        <th>CHECKOUT DATE</th>
+        <th>DUE DATE</th>
+        <th>RETURN DATE</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody *ngIf = "loans.length>0">
+      <tr *ngFor = "let loan of loans">
+        <td>{{loan.id}}</td>
+        <td>{{loan.bookId}}</td>
+        <td>{{loan.studentId}}</td>
+        <td>{{loan.checkoutDate}}</td>
+        <td>{{loan.dueDate}}</td>
+        <td>{{loan.returnDate}}</td>
+        <td><button (click)="deleteLoan(loan.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+<div style="margin: 30px; float: right;">
+  <button class="button" (click)="addAuthor()">+ADD AUTHOR</button>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>BIRTHDATE</th>
+        <th>NATIONALITY</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody *ngIf = "authorList.length>0">
+      <tr *ngFor = "let author of authorList">
+        <td>{{author.id}}</td>
+        <td>{{author.name}}</td>
+        <td>{{author.birthDate}}</td>
+        <td>{{author.nationality}}</td>
+        <td><button (click)="deleteAuthor(author.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

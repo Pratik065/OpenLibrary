@@ -1,0 +1,22 @@
+<div>
+  <h1>ADD PUBLISHERS</h1>
+  <form [formGroup] = "publishersForm" (ngSubmit) = "savePublisher()">
+    <div class="publisherInfo">
+      <label for="name">NAME : </label>
+      <input type="text" id="name" class="inputInfo" formControlName = "name">
+    </div>
+    <div class="publisherInfo">
+      <label for="address">ADDRESS : </label>
+      <input type="text" id="address" class="inputInfo" formControlName = "address">
+    </div>
+    <div class="publisherInfo">
+      <label for="phone">PHONE NUMBER : </label>
+      <input type="number" id="phone" class="inputInfo" formControlName = "phone">
+    </div>
+    <div class="publisherInfo">
+      <label for="email">E-MAIL ADDRESS : </label>
+      <input type="email" id="email" class="inputInfo" formControlName = "email">
+    </div>
+    <button type="submit">Save Publisher</button>
+  </form>
+</div>

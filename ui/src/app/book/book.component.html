@@ -1,0 +1,38 @@
+<h1 [ngClass] = "isColor?'title-purple':'title-color'">{{title}}</h1>
+<div style="margin: 20px; float: right;">
+  <button class="button" (click) = "addBook()">+ ADD BOOK</button>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>AUTHOR</th>
+        <th>ISBN</th>
+        <th>PUBLICATION DATE</th>
+        <th>PUBLISHER</th>
+        <th>COPIES</th>
+        <th>CATEGORY</th>
+        <th>GENRE</th>
+        <th>SUBGENRE</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody *ngIf = "books.length>0">
+      <tr *ngFor = "let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.publicationDate}}</td>
+        <td>{{book.publisher}}</td>
+        <td>{{book.copies}}</td>
+        <td>{{book.category}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.subgenre}}</td>
+        <td><button (click)="deleteBook(book.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

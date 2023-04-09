@@ -1,0 +1,26 @@
+<div>
+  <h1>ADD STUDENTS</h1>
+  <form [formGroup] = "studentsForm" (ngSubmit) = "saveStudent()">
+    <div class="studentInfo">
+      <label for="name">NAME : </label>
+      <input type="text" id="name" class="inputInfo" formControlName = "name">
+    </div>
+    <div class="studentInfo">
+      <label for="department">DEPARTMENT : </label>
+      <input type="text" id="department" class="inputInfo" formControlName = "department">
+    </div>
+    <div class="studentInfo">
+      <label for="rollNumber">ROLL NUMBER : </label>
+      <input type="number" id="rollNumber" class="inputInfo" formControlName = "rollNumber">
+    </div>
+    <div class="studentInfo">
+      <label for="birthDate">DATE OF BIRTH : </label>
+      <input type="date" id="birthDate" class="inputInfo" formControlName = "birthDate">
+    </div>
+    <div class="studentInfo">
+      <label for="mobileNumber">MOBILE NUMBER : </label>
+      <input type="number" id="mobileNumber" class="inputInfo" formControlName = "mobileNumber">
+    </div>
+    <button type="submit">Save Student</button>
+  </form>
+</div>
